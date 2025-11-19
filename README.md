@@ -6,34 +6,6 @@ An AI-powered code generation agent that creates complete web projects from spec
 
 This project contains an intelligent agent that generates fully functional web applications using LangGraph. The agent analyzes project requirements and generates complete HTML, CSS, and JavaScript applications with documentation.
 
-## Structure
-
-```
-├── agent/                  # LangGraph agent implementation
-│   ├── graph.py           # Main agent workflow and state management
-│   ├── prompts.py         # LLM prompts for code generation
-│   ├── states.py          # State definitions for the agent
-│   ├── tools.py           # Tools available to the agent
-│   └── __init__.py
-├── generated_project/     # Sample generated Todo App
-│   ├── index.html         # HTML structure
-│   ├── styles.css         # CSS styling and themes
-│   ├── script.js          # JavaScript application logic
-│   └── README.md          # Generated project documentation
-├── main.py                # Entry point for the agent
-├── pyproject.toml         # Project dependencies
-├── .env                   # Environment variables (not tracked)
-└── README.md              # This file
-```
-
-## Features
-
-- **AI-Powered Generation**: Uses LLMs to create complete web applications
-- **Full Stack**: Generates HTML, CSS, and JavaScript files
-- **Documentation**: Auto-generates comprehensive README files
-- **State Management**: Tracks generation progress through LangGraph states
-- **Modular Design**: Easy to extend with new tools and prompts
-
 ## Tech Stack
 
 - **Python 3.11+**
@@ -101,17 +73,6 @@ The agent will:
 3. Create comprehensive documentation
 4. Save all files to the `generated_project/` directory
 
-## Generated Project Example
-
-The `generated_project/` folder contains a sample **Colorful Todo App** with:
-
-- **Add, edit, and delete tasks**
-- **Mark tasks as complete**
-- **Filter by status** (All, Active, Completed)
-- **Drag-and-drop reordering**
-- **Multiple color themes** (Light, Dark, Solarized)
-- **Local storage persistence**
-- **Responsive design**
 
 ### Running the Generated App
 
@@ -177,52 +138,4 @@ agent/
 - `groq>=0.4.0` - Groq API client
 - `python-dotenv>=1.0.0` - Environment management
 
-## Troubleshooting
 
-### Groq API Key Issues
-
-If you get authentication errors:
-1. Verify your API key at [console.groq.com](https://console.groq.com)
-2. Check that `.env` has the correct `GROQ_API_KEY`
-3. Ensure `.env` is not committed to git
-
-### Generation Failures
-
-If code generation fails:
-1. Check the LLM response in the terminal output
-2. Verify your project specification is clear
-3. Check available tokens in your Groq account
-
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit changes: `git commit -m "Add your feature"`
-4. Push to branch: `git push origin feature/your-feature`
-5. Open a Pull Request
-
-## License
-
-MIT License - see LICENSE file for details
-
-## Support
-
-For issues and questions:
-- Open an issue on [GitHub Issues](https://github.com/abhigyan2003/code-generator/issues)
-- Check [LangChain Documentation](https://python.langchain.com/)
-- Review [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
-
-## Roadmap
-
-- [ ] Support for backend frameworks (FastAPI, Flask)
-- [ ] Database schema generation
-- [ ] API documentation generation
-- [ ] Unit test generation
-- [ ] Component library support
-- [ ] Web UI for project configuration
-
----
-
-**Built with LangChain, LangGraph, and Groq API**
