@@ -1,0 +1,155 @@
+:root {
+  /* Default light theme variables */
+  --primary: #f0f0f0;   /* background for cards, inputs */
+  --secondary: #333333; /* text colour and accents */
+  --background: #ffffff; /* page background */
+  --accent: #0066ff;   /* optional accent colour */
+}
+
+/* Light theme – explicit, overrides defaults */
+.theme-light {
+  --primary: #f0f0f0;
+  --secondary: #333333;
+  --background: #ffffff;
+  --accent: #0066ff;
+}
+
+/* Dark theme */
+.theme-dark {
+  --primary: #2c3e50;      /* card background */
+  --secondary: #ecf0f1;    /* text colour */
+  --background: #1a1a1a;   /* page background */
+  --accent: #3498db;
+}
+
+/* Solarized theme */
+.theme-solarized {
+  --primary: #073642;      /* dark cyan */
+  --secondary: #839496;    /* base0 */
+  --background: #002b36;   /* base03 */
+  --accent: #b58900;       /* yellow */
+}
+
+/* Global page styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+/* Central container – responsive max‑width */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+/* Theme selector – inherits theme colours */
+.theme-selector {
+  background: var(--primary);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+/* Input form layout */
+form.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form.task-input input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+form.task-input button {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Filter navigation layout */
+nav.filter-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+nav.filter-nav button {
+  background: var(--primary);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+/* Task list items */
+.task-item {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.task-item:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Completed task style */
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background: var(--secondary);
+  color: var(--background);
+}
+
+/* Drag‑and‑drop visual cues */
+.task-item.dragging {
+  opacity: 0.5;
+}
+
+.task-item.drag-over {
+  border: 2px dashed var(--secondary);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  form.task-input,
+  nav.filter-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form.task-input button,
+  nav.filter-nav button {
+    width: 100%;
+  }
+}

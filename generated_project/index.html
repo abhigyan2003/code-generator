@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Todo App</h1>
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </header>
+
+    <main>
+        <section id="todo-section">
+            <form id="new-task-form" onsubmit="return false;">
+                <input type="text" id="new-task-input" placeholder="Enter a new task" />
+                <button type="button" id="add-task-btn">Add</button>
+            </form>
+            <ul id="task-list">
+                <!-- Task items will be injected here -->
+            </ul>
+            <nav id="filter-nav">
+                <button data-filter="all">All</button>
+                <button data-filter="active">Active</button>
+                <button data-filter="completed">Completed</button>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Todo App. Built with ❤️.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
