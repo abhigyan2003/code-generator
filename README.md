@@ -16,11 +16,6 @@ This project contains an intelligent agent that generates fully functional web a
 
 ## Setup
 
-### Prerequisites
-
-- Python 3.11 or higher
-- Groq API key (get one at [console.groq.com](https://console.groq.com))
-
 ### Installation
 
 1. **Clone the repository**
@@ -57,7 +52,6 @@ Create a `.env` file in the root directory:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-**Note**: Never commit `.env` to version control. Use `.env.example` for template.
 
 ## Usage
 
@@ -137,5 +131,6 @@ agent/
 - `langgraph>=0.0.1` - Agent orchestration
 - `groq>=0.4.0` - Groq API client
 - `python-dotenv>=1.0.0` - Environment management
+
 
 
