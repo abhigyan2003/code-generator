@@ -125,12 +125,7 @@ agent/
 3. **Create prompts** in `agent/prompts.py`
 4. **Test** by running `python main.py`
 
-### Dependencies
 
-- `langchain>=0.1.0` - LLM framework
-- `langgraph>=0.0.1` - Agent orchestration
-- `groq>=0.4.0` - Groq API client
-- `python-dotenv>=1.0.0` - Environment management
 
 
 
